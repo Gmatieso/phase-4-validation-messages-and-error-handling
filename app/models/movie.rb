@@ -2,6 +2,7 @@ class Movie < ApplicationRecord
     #Writing Server-Side Validations
     CATEGORIES = ['Comedy', 'Drama', 'Animation', 'Mystery', 'Horror', 'Fantasy', 'Action', 'Documentary', 'Science Fiction']
     validates :title, presence: true
+    
     validates :year, numericality: {
     greater_than_or_equal_to: 1888,
     less_than_or_equal_to: Date.today.year
